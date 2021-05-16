@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --ci"
+    "test": "jest --ci --coverage"
   },
   "repository": {
     "type": "git",
