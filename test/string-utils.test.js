@@ -42,6 +42,14 @@ test('isEmpty test returns false', () => {
   expect(StringUtils.isEmpty('test')).toBeFalsy();
 });
 
+test('isEmpty " " returns false', () => {
+  expect(StringUtils.isEmpty(' ')).toBeFalsy();
+});
+
+test('isEmpty " " returns true', () => {
+  expect(StringUtils.isEmpty(' ', true)).toBeTruthy();
+});
+
 test('isEmpty empty object returns true', () => {
   expect(StringUtils.isEmpty({})).toBeTruthy();
 });
@@ -78,4 +86,50 @@ test('prettyPrintJSON { "test": "test" } returns correct format', () => {
 test('prettyPrintJSON ({ "test": "test" }, 4) returns correct format', () => {
   expect(StringUtils.prettyPrintJSON({ "test": "test" }, 4))
     .toBe('{\n    \"test\": \"test\"\n}');
+});
+
+//======================================================================================
+// replaceAll
+//======================================================================================
+
+test('replaceAll empty value returns null', () => {
+  expect(StringUtils.replaceAll()).toBe(null);
+});
+
+test('replaceAll null value returns null', () => {
+  expect(StringUtils.replaceAll(null, null, null)).toBe(null);
+});
+
+test('replaceAll (hello, ello, ey) value returns hey', () => {
+  expect(StringUtils.replaceAll('hello', 'ello', 'ey'))
+    .toBe('hey');
+});
+
+//======================================================================================
+// splitAndTrimString
+//======================================================================================
+
+test('splitAndTrimString empty value returns []', () => {
+  expect(StringUtils.splitAndTrimString())
+    .toEqual(expect.arrayContaining([]));
+});
+
+test('splitAndTrimString empty string returns []', () => {
+  expect(StringUtils.splitAndTrimString(''))
+    .toEqual(expect.arrayContaining([]));
+});
+
+test('splitAndTrimString "test, test" value returns ["test" , "test"]', () => {
+  expect(StringUtils.splitAndTrimString('test, test'))
+    .toEqual(expect.arrayContaining(['test', 'test']));
+});
+
+test('splitAndTrimString "test; test" value returns ["test;test"]', () => {
+  expect(StringUtils.splitAndTrimString('test; test'))
+    .toEqual(expect.arrayContaining(['test; test']));
+});
+
+test('splitAndTrimString "test; test" value returns ["test", "test"]', () => {
+  expect(StringUtils.splitAndTrimString('test; test', ';'))
+    .toEqual(expect.arrayContaining(['test', 'test']));
 });

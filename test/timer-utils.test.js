@@ -16,6 +16,11 @@ test('getTimeDifferenceString null returns empty string', () => {
     .toBe('2 Minute(s) 0 Second(s)');
 });
 
+test('getTimeDifferenceString null returns empty string', () => {
+  expect(TimerUtils.getTimeDifferenceString(Date.now()).length)
+    .toBeGreaterThanOrEqual(16);
+});
+
 //======================================================================================
 // formatTime
 //======================================================================================
