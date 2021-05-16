@@ -3,6 +3,26 @@
 const StringUtils = require('../lib/string-utils');
 
 //======================================================================================
+// contains
+//======================================================================================
+
+test('contains empty value returns false', () => {
+  expect(StringUtils.contains()).toBeFalsy();
+});
+
+test('contains null value returns false', () => {
+  expect(StringUtils.contains(null)).toBeFalsy();
+});
+
+test('contains (test, e) returns true', () => {
+  expect(StringUtils.contains('test', 'e')).toBeTruthy();
+});
+
+test('contains (test, E, true) returns false', () => {
+  expect(StringUtils.contains('test', 'E', true)).toBeFalsy();
+});
+
+//======================================================================================
 // isEmpty
 //======================================================================================
 
@@ -32,26 +52,6 @@ test('isEmpty 0 returns false', () => {
 
 test('isEmpty 1 returns false', () => {
   expect(StringUtils.isEmpty(1)).toBeFalsy();
-});
-
-//======================================================================================
-// contains
-//======================================================================================
-
-test('contains empty value returns false', () => {
-  expect(StringUtils.contains()).toBeFalsy();
-});
-
-test('contains null value returns false', () => {
-  expect(StringUtils.contains(null)).toBeFalsy();
-});
-
-test('contains (test, e) returns true', () => {
-  expect(StringUtils.contains('test', 'e')).toBeTruthy();
-});
-
-test('contains (test, E, true) returns false', () => {
-  expect(StringUtils.contains('test', 'E', true)).toBeFalsy();
 });
 
 //======================================================================================

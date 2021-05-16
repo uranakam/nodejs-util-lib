@@ -1,6 +1,6 @@
 {
   "name": "nodejs-util-lib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nodejs Utility Library",
   "main": "index.js",
   "author": "Michael Uranaka",
@@ -14,7 +14,7 @@
     "url": "git://github.com/uranakam/nodejs-util-lib.git"
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 14"
   },
   "dependencies": {
     "lodash": "^4.17.21"
