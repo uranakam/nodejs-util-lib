@@ -1,6 +1,8 @@
 NodeJS Utility Library
 ======================
 
+[![Node.js Package](https://github.com/uranakam/nodejs-util-lib/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/uranakam/nodejs-util-lib/actions/workflows/npm-publish.yml)
+[![CodeQL](https://github.com/uranakam/nodejs-util-lib/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/uranakam/nodejs-util-lib/actions/workflows/codeql-analysis.yml)
 ## Available Utility Types:
 
 - String Utilities
