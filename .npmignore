@@ -1,0 +1,9 @@
+node_modules
+.github
+coverage
+test
+.eslintrc.js
+.gitignore
+.nvmrc
+jest.config.js
+.idea
