@@ -1,6 +1,6 @@
 {
   "name": "nodejs-util-lib",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Nodejs Utility Library",
   "main": "index.js",
   "author": "Michael Uranaka",
