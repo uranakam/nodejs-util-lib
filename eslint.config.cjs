@@ -14,6 +14,7 @@ module.exports = defineConfig([
   ...compat.extends("eslint:recommended"),
 
   {
+    ignores: ["coverage/**", "node_modules/**"],
     languageOptions: {
       globals: {
         ...globals.browser,
